@@ -10,8 +10,12 @@ createApp({
     },
     methods: {
         addTask() {
-            this.taskList.unshift({ text: this.newTask, done: false });
-            this.newTask = '';
+            if (this.newTask.trim() !== '') {
+                this.taskList.unshift({ text: this.newTask, done: false });
+                this.newTask = '';
+            } else {
+                alert('Please enter valid text!')
+            }
         },
         taskDone(index) {
             const completedTask = this.taskList.splice(index, 1)[0];
