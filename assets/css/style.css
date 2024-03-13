@@ -56,7 +56,7 @@ button {
 
 
 input {
-    padding: 6px;
+    padding: 7px;
     border-radius: 8px;
     border: none;
     background-color: #F6F8F9;
@@ -97,16 +97,17 @@ li {
     text-align: center;
     margin-right: 20px;
     border-radius: 8px;
+    cursor: pointer;
+    color: white;
 }
 
 .green {
-    border: 1px solid #2DC6AB;
-    color: #2DC6AB;
+    background-color: #2dc64e;
+
 }
 
 .red {
-    border: 1px solid #FF1010;
-    color: #FF1010;
+    background-color: #FF1010;
 }
 
 /* Responsive */

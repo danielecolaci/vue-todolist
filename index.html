@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Todolist</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/img/icon.png">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
             <!-- Button -->
             <div id="form">
                 <input type="text" placeholder="Add Task" required id="input-text" v-model="newTask">
-                <button id="add-btn" @click="addTask">Add</button>
+                <button id="add-btn" @click="addTask()">Add</button>
             </div>
             <hr>
             <!-- List -->
@@ -28,8 +29,8 @@
                     <li>
                         <h3>&blacktriangledown; To Do</h3>
                         <ul>
-                            <li v-for="(task, index) in taskList"><span class="check"
-                                    :class="{green: !task.done}">&check;</span> {{ task.text }}</li>
+                            <li v-for="(task, index) in taskList"><span class="check" :class="{green: !task.done}"
+                                    @click="taskDone(index)">&check;</span> {{ task.text }}</li>
                         </ul>
                     </li>
                 </ul>
@@ -38,8 +39,8 @@
                     <li>
                         <h3>&blacktriangledown; Done</h3>
                         <ul>
-                            <li v-for="(complete, index) in completed"><span class="check"
-                                    :class="{red: complete.done}">&cross;</span> {{
+                            <li v-for="(complete, index) in completed"><span class="check" :class="{red: complete.done}"
+                                    @click="taskNotDone(index)">&cross;</span> {{
                                 complete.text }}</li>
                         </ul>
                     </li>
