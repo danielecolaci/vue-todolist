@@ -17,10 +17,10 @@
     <div id="app">
         <div class="container">
             <!-- Button -->
-            <form id="form">
-                <input type="text" placeholder="Add Task" required id="input-text">
-                <button id="add-btn">Add</button>
-            </form>
+            <div id="form">
+                <input type="text" placeholder="Add Task" required id="input-text" v-model="newTask">
+                <button id="add-btn" @click="addTask">Add</button>
+            </div>
             <hr>
             <!-- List -->
             <div class="list">
@@ -39,7 +39,7 @@
                         <h3>&blacktriangledown; Done</h3>
                         <ul>
                             <li v-for="(complete, index) in completed"><span class="check"
-                                    :class="{red: complete.done}">&check;</span> {{
+                                    :class="{red: complete.done}">&cross;</span> {{
                                 complete.text }}</li>
                         </ul>
                     </li>

@@ -6,7 +6,6 @@ createApp({
             newTask: '',
             taskList: [
                 { text: 'First Task', done: false },
-                { text: 'Second Task', done: false },
             ],
             completed: [
                 { text: 'First Task Done', done: true },
@@ -14,7 +13,10 @@ createApp({
         }
     },
     methods: {
-
+        addTask() {
+            this.taskList.push({ text: this.newTask, done: false });
+            this.newTask = '';
+        }
     },
 
     mounted() {
