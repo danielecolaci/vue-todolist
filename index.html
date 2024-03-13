@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Todolist</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1 class="title">To Do List</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Button -->
+            <form class="form">
+                <input type="text" placeholder="Add Task" required>
+                <button id="add">Add</button>
+            </form>
+            <hr>
+            <!-- List -->
+            <div class="list">
+                <ul id="todo-list">
+                    <li>
+                        <h3>&blacktriangledown; To Do</h3>
+                        <ul>
+                            <li><span class="check done">&check;</span> Quarterly Newsletter</li>
+                        </ul>
+                    </li>
+                </ul>
+                <br>
+                <ul id="done-list">
+                    <li>
+                        <h3>&blacktriangledown; Done</h3><br>
+                        <ul>
+                    </li><span class="check not">&cross;</span> Recruiting blog post</li><br><br>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
