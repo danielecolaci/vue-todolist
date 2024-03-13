@@ -19,7 +19,7 @@
         <div class="container">
             <!-- Button -->
             <div id="form">
-                <input type="text" placeholder="Add Task" required id="input-text" v-model="newTask">
+                <input type="text" placeholder="Add Task" id="input-text" v-model="newTask" @keyup.enter="addTask()">
                 <button id="add-btn" @click="addTask()">Add</button>
             </div>
             <hr>

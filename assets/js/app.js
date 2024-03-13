@@ -26,7 +26,7 @@ createApp({
             const uncompletedTask = this.completed.splice(index, 1)[0];
             uncompletedTask.done = false;
             this.taskList.unshift(uncompletedTask);
-        }
+        },
     },
 
     mounted() {
