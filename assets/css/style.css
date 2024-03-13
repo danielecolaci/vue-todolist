@@ -35,31 +35,32 @@ header {
     margin: auto;
     width: 786px;
     height: 100%;
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
-.form {
+#form {
     padding: 14px 0 8px 50px;
 }
 
 button {
-    border-radius: 6px;
+    border-radius: 8px;
     padding: 6px 10px;
     font-size: 12px;
     border: 1px solid;
-}
-
-#add {
     color: white;
     border-color: #14AAF5;
-    background-color: #14AAF5
+    background-color: #14AAF5;
+    margin-left: 10px;
+    width: 10%;
 }
 
-.form input {
+
+input {
     padding: 6px;
-    border-radius: 6px;
+    border-radius: 8px;
     border: none;
     background-color: #F6F8F9;
+    width: 40%;
 }
 
 #section {
@@ -95,15 +96,15 @@ li {
     vertical-align: middle;
     text-align: center;
     margin-right: 20px;
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
-.done {
+.green {
     border: 1px solid #2DC6AB;
     color: #2DC6AB;
 }
 
-.not {
+.red {
     border: 1px solid #FF1010;
     color: #FF1010;
 }

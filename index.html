@@ -14,12 +14,12 @@
         <h1 class="title">To Do List</h1>
     </header>
 
-    <main>
+    <div id="app">
         <div class="container">
             <!-- Button -->
-            <form class="form">
-                <input type="text" placeholder="Add Task" required>
-                <button id="add">Add</button>
+            <form id="form">
+                <input type="text" placeholder="Add Task" required id="input-text">
+                <button id="add-btn">Add</button>
             </form>
             <hr>
             <!-- List -->
@@ -28,23 +28,29 @@
                     <li>
                         <h3>&blacktriangledown; To Do</h3>
                         <ul>
-                            <li><span class="check done">&check;</span> Quarterly Newsletter</li>
+                            <li v-for="(task, index) in taskList"><span class="check"
+                                    :class="{green: !task.done}">&check;</span> {{ task.text }}</li>
                         </ul>
                     </li>
                 </ul>
                 <br>
                 <ul id="done-list">
                     <li>
-                        <h3>&blacktriangledown; Done</h3><br>
+                        <h3>&blacktriangledown; Done</h3>
                         <ul>
-                    </li><span class="check not">&cross;</span> Recruiting blog post</li><br><br>
+                            <li v-for="(complete, index) in completed"><span class="check"
+                                    :class="{red: complete.done}">&check;</span> {{
+                                complete.text }}</li>
+                        </ul>
+                    </li>
                 </ul>
+                <br>
             </div>
         </div>
-    </main>
+        </main>
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="./assets/js/app.js"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="./assets/js/app.js"></script>
 </body>
 
 </html>
